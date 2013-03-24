@@ -2,12 +2,7 @@
 
 class Database {
 
-	private $host;
-	private $db;
-	private $user;
-	private $password;
-
-	public function connect() {
+	public function Database($host, $db, $user, $password) {
 		try {
 			return new PDO("mysql:host=$host;dbname=$db", $user, $password);
 		}
