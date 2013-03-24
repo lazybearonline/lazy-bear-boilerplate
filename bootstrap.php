@@ -3,7 +3,7 @@
 // $config = parse_ini_file('application.ini');
 
 function __autoload($class) {
-    include $class . '.php';
+    include $class . EXT;
 }
 
-require_once APPLICATION . '/layout.php';
+require_once 'layout' . EXT;
