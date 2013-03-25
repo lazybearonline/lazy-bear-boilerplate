@@ -55,15 +55,20 @@ class Router {
 
 		}
 
-		if (($this->route == "/") || ($this->route == "/index.php")) {
+		$this->route = substr($this->route, 1);
+
+		if (($this->route == "") || ($this->route == "index.php")) {
 			
 			$this->module = 'home';
 			$this->page = 'pages/home' . EXT;
 		
 		} else {
 
-			$this->module = substr($this->route, 1);
-			$this->page = 'pages/' . substr($this->route, 1) . EXT;
+			$route_array = explode('/', $this->route);
+			$this->module = $route_array[0];
+			$this->route = implode('-', $route_array);
+
+			$this->page = 'pages/' . $this->route . EXT;
 
 		}
 
