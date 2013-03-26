@@ -42,7 +42,7 @@
 		<div class="footer">
 			<div class="container">
 				<div class="pull-left">Lazy Bear Creations 2013</div>
-				<div class="pull-right">Version 2.0</div>
+				<div class="pull-right">Version 2.0.1</div>
 			</div>
 		</div>
 
