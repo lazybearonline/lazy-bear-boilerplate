@@ -11,7 +11,7 @@
 		<meta name="author" content="">
 		<title>Lazy Bear Boilerplate<?php print (isset($router->title)) ? ' - ' . $router->title : '' ; ?></title>
 
-		<link href='http://fonts.googleapis.com/css?family=Roboto:100,400,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600,700,800,900|Play:400,700' rel='stylesheet' type='text/css'>
 		<link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
 		<link href="/assets/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
 		<link href="/assets/css/application.css" rel="stylesheet" media="screen">
