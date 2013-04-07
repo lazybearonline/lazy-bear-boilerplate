@@ -11,48 +11,22 @@
 		<meta name="author" content="">
 		<title>Lazy Bear Boilerplate<?php print (isset($router->title)) ? ' - ' . $router->title : '' ; ?></title>
 
-		<link href='http://fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600,700,800,900|Play:400,700' rel='stylesheet' type='text/css'>
-		<link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<link href="/assets/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+		<link href='http://fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+		<link href="/vendor/bootstrap/css/bootstrap.min.css?v=2.3.1" rel="stylesheet" media="screen">
+		<link href="/vendor/bootstrap/css/bootstrap-responsive.min.css?v=2.3.1" rel="stylesheet" media="screen">
 		<link href="/assets/css/application.css" rel="stylesheet" media="screen">
 
-		<script src="http://code.jquery.com/jquery-latest.js"></script>
-		<script src="/assets/js/bootstrap.min.js"></script>
-		<script src="/assets/js/application.js"></script>
+		<script src="/vendor/jquery/jquery.min.js?v=1.9.1"></script>
+		<script src="/vendor/bootstrap/js/bootstrap.min.js?v=2.3.1"></script>
+		<script src="/vendor/bootstrap/js/application.js?v=2.3.1"></script>
 
 	</head>
 
 	<body class="<?php print $router->module; ?>">
 
-		<div class="header">
-			<div class="container">
-
-				<div class="navbar">
-					<div class="navbar-inner">
-
-						<a href="http://www.lazybearhosting.co.uk">
-							<h1 class="brand">LazyBear<b>Boilerplate</b></h1>
-						</a>
-
-						<ul class="nav nav-pills pull-right">
-							<li <?php if ($router->module === "home") { print 'class="active"'; } ?>><a href="/home">Home</a></li>
-							<li <?php if ($router->module === "about") { print 'class="active"'; } ?>><a href="/about">About</a></li>
-							<li <?php if ($router->module === "contact") { print 'class="active"'; } ?>><a href="/contact">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-				
-			</div>
-		</div>
+		<?php include 'snippets/header.php'; ?>
 
 		<?php require_once $router->page; ?>
-
-		<div class="footer">
-			<div class="container">
-				<div class="pull-left">Lazy Bear Creations 2013</div>
-				<div class="pull-right">Version 2.1.1</div>
-			</div>
-		</div>
 
 	</body>
 </html>
