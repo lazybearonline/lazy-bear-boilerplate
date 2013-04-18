@@ -9,12 +9,10 @@ class Router {
 	public $module;
 	public $title;
 
-	public function Router($route) {
+	public function Router() {
 
-		if (isset($route))
-			$this->route = $_SERVER['REQUEST_URI'];
+		$this->route = $_SERVER['REQUEST_URI'];
 
-		$this->route = $route;
 		$this->parse_route();
 		$this->get_page();
 
@@ -27,6 +25,7 @@ class Router {
 		if (strstr($route, "?")) {
 			
 			$params_string = explode("?", $route);
+			
 			$this->route = $params_string[0];
 			$params_string = $params_string[1];
 			
@@ -49,12 +48,6 @@ class Router {
 
 	public function get_page() {
 
-		if (!isset($this->route)) {
-
-			$this->Router();
-
-		}
-
 		$this->route = substr($this->route, 1);
 
 		if (($this->route == "") || ($this->route == "index.php")) {
@@ -63,10 +56,6 @@ class Router {
 			$this->page = 'pages/home' . EXT;
 		
 		} else {
-
-			$route_array = explode('/', $this->route);
-			$this->module = $route_array[0];
-			$this->route = implode('-', $route_array);
 
 			$this->page = 'pages/' . $this->route . EXT;
 
