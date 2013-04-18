@@ -27,7 +27,7 @@
 
 		<script src="/vendor/jquery/jquery.min.js?v=1.9.1"></script>
 		<script src="/vendor/bootstrap/js/bootstrap.min.js?v=2.3.1"></script>
-		<script src="/vendor/bootstrap/js/application.js?v=2.3.1"></script>
+		<script src="/assets/js/application.js?v=2.3.1"></script>
 
 	</body>
 </html>
