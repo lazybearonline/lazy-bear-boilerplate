@@ -1,5 +1,6 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-		$router = new Router($_SERVER['REQUEST_URI']); ?>
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+<?php $router = new Router(); ?>
 
 <!DOCTYPE html>
 <html>
