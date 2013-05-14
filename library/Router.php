@@ -57,6 +57,9 @@ class Router {
 		
 		} else {
 
+			$route_array = explode(DIRECTORY_SEPARATOR, $this->route);
+
+			$this->module = $route_array[0];
 			$this->page = 'pages/' . $this->route . EXT;
 
 		}
